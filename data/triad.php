@@ -1,6 +1,6 @@
 <?php
 
-require_once "/variables/variable.php";
+require_once __DIR__."/variables/variable.php";
 
 class Triad {
     
