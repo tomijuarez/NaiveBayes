@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link href="../css/bootstrap.css" rel="stylesheet"/>
+        <style>.small-container{ width: 400px; !important; margin: 0px; }</style>
+        <title>{$title}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Naive Bayes Classifier <small> | clasificar usuario</small></h1>
+            </div>
+
+            <h3 class="text-success">{$successTitle}</h3>
+
+            <div class="alert alert-info" role="alert">
+                La clasificación de un usuario con <strong>{$votes}%</strong> positivos, con un tiempo medio de respuesta de <strong>{$response}</strong> días y <strong>{$time}</strong> meses activo en el sitio es <strong>{$class}</strong>
+            </div>
+
+            <div class="container small-container">
+                <div class="row">
+                  <div class="col-md-6">
+                      <div class="progress">
+                          <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {$appallingPctg}%">
+                            <span class="sr-only">{$appallingPctg}%</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">Pésimo [{$appallingPctg}%]</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {$badPctg}%">
+                        <span class="sr-only">{$badPctg}%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">Malo [{$badPctg}%]</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {$neutralPctg}%">
+                        <span class="sr-only">{$neutralPctg}%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">Neutro [{$neutralPctg}%]</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {$goodPctg}%">
+                        <span class="sr-only">{$goodPctg}%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">Bueno [{$goodPctg}%]</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {$excellentPctg}%">
+                        <span class="sr-only">{$excellentPctg}%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">Excelente [{$excellentPctg}%]</div>
+                </div>
+            </div>
+        </div>        
+    </body>
+</html>

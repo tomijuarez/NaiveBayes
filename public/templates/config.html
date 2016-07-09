@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="../css/bootstrap.css" rel="stylesheet"/>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <title>{$title}</title>
+        <style>p { text-indent: 2.5em; }</style>
+    </head>
+    <body>
+
+    <div class="container">
+
+        <div class="page-header">
+          <h1>Naive Bayes Classifier <small> | clasificar usuario</small></h1>
+        </div>
+
+        <form class="form-horizontal" method="get" action="classify.php">
+          <div class="form-group">
+            <label for="inputVotes" class="col-sm-2 control-label">Votos positivos</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputVotes" placeholder="Número natural" name="votes">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputVotes" class="col-sm-2 control-label">Ventas totales</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputSales" placeholder="Número natural" name="sales">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputResponse" class="col-sm-2 control-label">Tiempo de respuesta</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputResponse" placeholder="Días con formato 0.X o natural" name="response">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTime" class="col-sm-2 control-label">Tiempo en el sitio</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="inputTime" placeholder="Meses" name="time">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Clasificar</button>
+            </div>
+          </div>
+        </form>
+
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h2>Acerca del clasificador</h2>
+            <p>El presente es un proyecto final de la cátedra 'Investigación Operativa' realizado por los alumnos Mariano Fernández Cocirio, Tomás Juárez y los progesores Mg. Daniel Xodo y Mg. Moisés Bueno.</p>
+            <p>Con el desarrollo tecnológico de los últimos años, muchas empresas han optado por introducir sus sistemas de comercio electrónico. Éstas realizan esfuerzos muy grandes por mantener los sitemas de e-commerce lo más intuitivos posibles y fáciles de navegar, de forma tal que los usuarios se sientan cómodos puesto que son potenciales compradores. Sin embargo, muchas personas aún desconfían de estos sistemas dado que no se realiza una compra directa y personal -como en los últimos cientos de años-. Grandes empresas como e-bay y MercadoLibre han utilizado muchas técnicas para solucionar este inconveniente, como la reintegración del dinero si ocurren problemas en la transacción en algunos productos seleccionados. Aún así, es menester otorgar una visión más amplia al cliente haciendo que la compra sea lo más transparente posible. Una forma de avanzar con esta política de claridad consiste en etiquetar a todos los usuarios en una escala de clasificación, partiendo de "pésimo" a "excelente", para que el usuario sepa a priori a qué clase de usuario está solicitando la compra de un producto. Nótese que con la implementación de un clasificador ya no importa quién es el usuario sino cómo es, implicando que el usuario ya no se preocupe por la identidad de los vendedores en este tipo de sistemas.</p>
+            <p>Un usuario podría ver el historial de un vendedor y realizar una estimación de la calidad de ventas e inferir (o suponer) cómo saldrá su compra. Esto es trivial si el usuario tuvo 100 ventas y 99 votos negativos (ya sea por incumplimiento de los términos acordados con el comprador, por no entregar el producto, por entregarlo roto, por malos tratos, etcétera). Ahora bien, si el usuario tiene muchos votos positivos, pero no todos, sería razonable pensar que faltan más parámetros para determinar si es un buen vendedor o no. Otros parámetros serán la cantidad de tiempo que el usuario vende productos en la plataforma electrónica y el tiempo medio que se toma en responder mensajes a los vendedores. Al introducir estas variables vemos que los lapsos de tiempo se pueden partir en rangos (responde entre 4 y 7 días, hace más de 28 meses que es vendedor), con lo cual el cálculo de la calidad del vendedor ya no resulta sencillo (al menos no mentalmente), con lo cual se debe introducir un clasificador. Cabe destacar que en este tipo de plataformas, es necesario dar facilidades al usuario, con lo cual no es una buena opción darle la responsabilidad de calcular estos parámetros en cada compra. Ese es el objetivo de un clasificador de usuarios en sistemas de e-commerce; ayudar a un comprador a mejorar su calidad y a las empresas y vendedores a obtener una mayor ganancia, al mismo tiempo que se mantiene libre de fraudes su sistema.</p>
+          </div>
+          <div class="panel-footer">
+            <a class="label label-success">Informe</a>
+            <a class="label label-danger">Código fuente</a>
+          </div>
+        </div>
+
+        
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </body>
+</html>
